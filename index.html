@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carlos trajes de baño: tienda online moderna de bikinis, enterizos, shorts y accesorios para playa.">
+  <title>Carlos trajes de baño</title>
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Carlos trajes de baño inicio">
+      <span class="brand-mark">C</span>
+      <span>Carlos trajes de baño</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegacion principal">
+      <a href="#coleccion">Coleccion</a>
+      <a href="#favoritos">Favoritos</a>
+      <a href="#guia">Guia de tallas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <label class="search-control">
+        <span class="sr-only">Buscar productos</span>
+        <input id="searchInput" type="search" placeholder="Buscar">
+      </label>
+      <button class="cart-toggle" id="cartButton" type="button" aria-expanded="false" aria-controls="cartDrawer">
+        Carrito <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <img class="hero-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Man_in_swimshorts_entering_sea_%28Unsplash%29.jpg/960px-Man_in_swimshorts_entering_sea_%28Unsplash%29.jpg" alt="Persona entrando al mar en una playa soleada">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Nueva temporada</p>
+        <h1>Carlos trajes de baño</h1>
+        <p class="hero-copy">Trajes de baño frescos, comodos y modernos para playa, piscina y dias de sol.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#coleccion">Comprar ahora</a>
+          <a class="button secondary" href="#favoritos">Ver favoritos</a>
+        </div>
+      </div>
+      <div class="hero-perks" aria-label="Beneficios de la tienda">
+        <span>Envios nacionales</span>
+        <span>Cambios faciles</span>
+        <span>Pago contra entrega disponible</span>
+      </div>
+    </section>
+
+    <section class="section intro-strip" aria-label="Categorias principales">
+      <a href="#coleccion" data-filter-link="mujer">
+        <strong>Mujer</strong>
+        <span>Bikinis y enterizos</span>
+      </a>
+      <a href="#coleccion" data-filter-link="hombre">
+        <strong>Hombre</strong>
+        <span>Shorts y trunks</span>
+      </a>
+      <a href="#coleccion" data-filter-link="accesorios">
+        <strong>Accesorios</strong>
+        <span>Pareo, gafas y bolsos</span>
+      </a>
+    </section>
+
+    <section class="section split-showcase" id="favoritos">
+      <div>
+        <p class="eyebrow">Favoritos del mes</p>
+        <h2>Looks listos para vacaciones</h2>
+        <p>Seleccionamos piezas versatiles: telas suaves, cortes favorecedores y colores que se ven bien dentro y fuera del agua.</p>
+      </div>
+      <div class="lookbook">
+        <article>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Woman_in_a_swimsuit_in_water_%28Unsplash%29.jpg/960px-Woman_in_a_swimsuit_in_water_%28Unsplash%29.jpg" alt="Mujer usando traje de baño en el agua">
+          <span>Enterizos premium</span>
+        </article>
+        <article>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Woman_posing_in_swimsuit_%28Unsplash%29.jpg/500px-Woman_posing_in_swimsuit_%28Unsplash%29.jpg" alt="Mujer sentada en rocas con traje de baño colorido">
+          <span>Color tropical</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section catalog" id="coleccion">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Coleccion</p>
+          <h2>Compra por estilo</h2>
+        </div>
+        <label class="sort-control">
+          <span>Ordenar</span>
+          <select id="sortSelect">
+            <option value="featured">Destacados</option>
+            <option value="price-asc">Menor precio</option>
+            <option value="price-desc">Mayor precio</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrar productos">
+        <button class="filter-button is-active" type="button" data-filter="todos">Todo</button>
+        <button class="filter-button" type="button" data-filter="mujer">Mujer</button>
+        <button class="filter-button" type="button" data-filter="hombre">Hombre</button>
+        <button class="filter-button" type="button" data-filter="ninos">Ninos</button>
+        <button class="filter-button" type="button" data-filter="accesorios">Accesorios</button>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState">No encontramos productos con esa busqueda.</p>
+    </section>
+
+    <section class="section info-grid" id="guia">
+      <article>
+        <span>01</span>
+        <h3>Guia de tallas simple</h3>
+        <p>Elige tu talla habitual. Si estas entre dos tallas, recomendamos subir una talla para mayor comodidad.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Materiales comodos</h3>
+        <p>Telas elasticas de secado rapido, forros suaves y costuras pensadas para moverte sin molestia.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Compra sin vueltas</h3>
+        <p>Agrega productos al carrito, revisa cantidades y prepara tu pedido para finalizar por WhatsApp o checkout.</p>
+      </article>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Tu pedido</p>
+          <h2>Carrito</h2>
+        </div>
+        <button id="closeCartButton" class="icon-button" type="button" aria-label="Cerrar carrito">x</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">Tu carrito esta listo para tus proximas vacaciones.</div>
+      <div class="cart-summary">
+        <div>
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0</strong>
+        </div>
+        <button class="checkout-button" id="checkoutButton" type="button">Finalizar compra</button>
+        <p>Demo sin pasarela de pago. Lista para conectar WhatsApp, Stripe o Mercado Pago.</p>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer" id="contacto">
+    <div>
+      <strong>Carlos trajes de baño</strong>
+      <p>Moda de playa moderna para todos los planes de sol.</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:hola@carlostdb.com">hola@carlostdb.com</a>
+      <a href="tel:+573001112233">+57 300 111 2233</a>
+      <a href="#inicio">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="store.js"></script>
+</body>
+</html>
